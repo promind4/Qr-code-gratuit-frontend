@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <!-- Background -->
+  <rect width="600" height="700" fill="white"/>
+  
+  <!-- Speech bubble frame -->
+  <path d="M 30 30 Q 10 30 10 50 L 10 550 Q 10 570 30 570 L 200 570 L 250 650 L 250 570 L 570 570 Q 590 570 590 550 L 590 50 Q 590 30 570 30 Z" 
+        fill="#10B981" stroke="#059669" stroke-width="6"/>
+  
+  <!-- Inner white area for QR -->
+  <rect x="50" y="120" width="500" height="500" fill="white" rx="15"/>
+  
+  <!-- SCAN ME text in bubble -->
+  <text x="300" y="80" font-family="Arial, sans-serif" font-size="38" font-weight="bold" 
+        fill="white" text-anchor="middle" letter-spacing="4">SCAN ME!</text>
+  
+  <!-- Decorative dots -->
+  <circle cx="80" cy="75" r="8" fill="white" opacity="0.7"/>
+  <circle cx="110" cy="75" r="8" fill="white" opacity="0.7"/>
+  <circle cx="140" cy="75" r="8" fill="white" opacity="0.7"/>
+</svg>

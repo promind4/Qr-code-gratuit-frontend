@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <!-- Background -->
+  <rect width="600" height="700" fill="white"/>
+  
+  <!-- Top banner with grid pattern -->
+  <defs>
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#4F46E5"/>
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#6366F1" stroke-width="2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Top bar -->
+  <rect width="600" height="80" fill="url(#gridPattern)"/>
+  <text x="300" y="55" font-family="Arial, sans-serif" font-size="42" font-weight="bold" 
+        fill="white" text-anchor="middle" letter-spacing="8">SCAN ME</text>
+  
+  <!-- QR Code placeholder (will be replaced) -->
+  <rect x="50" y="120" width="500" height="500" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="2" rx="10"/>
+  <text x="300" y="380" font-family="Arial" font-size="24" fill="#9CA3AF" text-anchor="middle">QR Code Here</text>
+  
+  <!-- Bottom decorative border -->
+  <rect x="0" y="640" width="600" height="60" fill="#4F46E5"/>
+  <circle cx="100" cy="670" r="15" fill="white" opacity="0.3"/>
+  <circle cx="200" cy="670" r="15" fill="white" opacity="0.3"/>
+  <circle cx="300" cy="670" r="15" fill="white" opacity="0.3"/>
+  <circle cx="400" cy="670" r="15" fill="white" opacity="0.3"/>
+  <circle cx="500" cy="670" r="15" fill="white" opacity="0.3"/>
+</svg>
