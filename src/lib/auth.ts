@@ -1,6 +1,6 @@
 // Authentication utilities for frontend
 
-const API_URL = "http://127.0.0.1:8000/api/v1/auth"
+const API_URL = (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000") + "/api/v1/auth"
 
 export interface User {
     id: string

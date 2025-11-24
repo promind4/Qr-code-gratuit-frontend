@@ -85,6 +85,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"
+
 function App() {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(false)
@@ -135,7 +137,7 @@ function App() {
     setError(null)
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/qrcode/generate", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/qrcode/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -181,7 +183,7 @@ function App() {
     formData.append("file", file)
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/v1/upload/", {
+      const response = await fetch(`${API_BASE_URL}/api/v1/upload/`, {
         method: "POST",
         body: formData,
       })
@@ -250,7 +252,7 @@ function App() {
       if (format === 'pdf') {
         toast.info("Génération du PDF en cours...", { duration: 2000 })
 
-        const response = await downloadWithRetry("http://127.0.0.1:8000/api/v1/qrcode/generate", {
+        const response = await downloadWithRetry(`${API_BASE_URL}/api/v1/qrcode/generate`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
