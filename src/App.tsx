@@ -66,7 +66,7 @@ import { toast } from "sonner"
 import {
   Download, Link, Type, Mail, Palette, Settings, QrCode, Sparkles,
   FileText, Star, Phone, Upload, Image as ImageIcon, Shapes, Menu, Share2,
-  Check, Copy, X, Info, LogOut, User as UserIcon
+  Check, Copy, X, Info, LogOut, User as UserIcon, Infinity as InfinityIcon
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { HelpPage } from "@/components/HelpPage"
@@ -557,11 +557,11 @@ function App() {
 
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl font-extrabold tracking-tight lg:text-5xl text-slate-900 dark:text-white">
-            Générez des QR Codes <span className="text-blue-600">Gratuit</span>
-          </h2>
+          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl text-slate-900 dark:text-white">
+            Générateur de QR Code Gratuit et Haute Qualité
+          </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Créez, personnalisez et téléchargez vos QR codes en haute qualité. Gratuit, rapide et sans inscription.
+            Créez des QR codes personnalisés avec Logo, Couleurs et Designs uniques. Format vectoriel (SVG, PDF) disponible. 100% Gratuit et sans inscription.
           </p>
         </div>
 
@@ -1419,6 +1419,71 @@ function App() {
           </Card>
         </div>
 
+        {/* Features Section */}
+        <div className="mt-24 mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Pourquoi nous choisir ?</h2>
+            <p className="text-slate-600 mt-4">Des fonctionnalités professionnelles, totalement gratuites.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+              <CardHeader>
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
+                  <InfinityIcon className="h-6 w-6" />
+                </div>
+                <CardTitle className="text-xl">Durée de vie illimitée</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Vos QR Codes fonctionnent indéfiniment. Pas de limite de scan, pas d'expiration. Utilisez-les pour vos projets commerciaux en toute sérénité.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+              <CardHeader>
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 text-purple-600">
+                  <Download className="h-6 w-6" />
+                </div>
+                <CardTitle className="text-xl">Haute Définition & Vectoriel</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Idéal pour l'impression. Téléchargez vos codes en format PNG haute qualité ou SVG vectoriel pour une netteté parfaite sur vos affiches et flyers.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+              <CardHeader>
+                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 text-emerald-600">
+                  <ImageIcon className="h-6 w-6" />
+                </div>
+                <CardTitle className="text-xl">Personnalisation avec Logo</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Rendez votre QR Code unique. Ajoutez votre propre logo ou choisissez parmi les icônes de réseaux sociaux (Instagram, Facebook, WiFi...).
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+              <CardHeader>
+                <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 text-amber-600">
+                  <Palette className="h-6 w-6" />
+                </div>
+                <CardTitle className="text-xl">Design sur mesure</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Ne vous contentez pas du noir et blanc. Changez les couleurs, les formes des points et les cadres pour correspondre à votre identité visuelle.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* FAQ Section */}
         <div className="mt-24 grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
@@ -1479,6 +1544,33 @@ function App() {
                   <p className="mt-2">Exemple : un QR Code placé sur l’enseigne d’un magasin à hauteur des yeux, avec un contraste élevé et un fond clair, sera scanné facilement par tous les visiteurs.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SEO Section */}
+        <div className="mt-24 border-t pt-12">
+          <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Tout ce que vous pouvez faire</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-600 dark:text-slate-400">
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Pour les Restaurants</h3>
+              <p className="mb-4">
+                Créez un QR Code Menu pour permettre à vos clients d'accéder à votre carte sans contact. Mettez à jour votre menu PDF ou URL à tout moment sans changer le QR Code.
+              </p>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Connexion WiFi Facile</h3>
+              <p>
+                Générez un QR Code WiFi pour que vos invités se connectent instantanément à votre réseau sans avoir à taper de mot de passe complexe.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Cartes de Visite (vCard)</h3>
+              <p className="mb-4">
+                Partagez vos coordonnées professionnelles en un scan. Le QR Code vCard permet d'ajouter directement votre contact dans le téléphone de votre interlocuteur.
+              </p>
+              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Liens URL & Réseaux Sociaux</h3>
+              <p>
+                Redirigez vers votre site web, votre page Instagram, Facebook ou LinkedIn. Augmentez votre visibilité et votre trafic en ligne.
+              </p>
             </div>
           </div>
         </div>
