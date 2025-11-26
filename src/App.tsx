@@ -72,6 +72,7 @@ import { cn } from "@/lib/utils"
 import { HelpPage } from "@/components/HelpPage"
 import { Footer } from "@/components/Footer"
 import { StickerSelector } from "@/components/StickerSelector"
+import { InspirationSection } from "@/components/InspirationSection"
 import { AuthModal } from "@/components/auth/AuthModal"
 import { getUser, logout, type User } from "@/lib/auth"
 import { STICKERS } from "@/lib/stickers"
@@ -1043,6 +1044,7 @@ function App() {
                             { name: 'TikTok', domain: 'tiktok.com' },
                             { name: 'Pinterest', domain: 'pinterest.com' },
                             { name: 'Apple', domain: 'apple.com' },
+                            { name: 'WhatsApp', domain: 'whatsapp.com' },
                             { name: 'Email', domain: 'gmail.com' }
                           ].map((item) => {
                             const itemUrl = `https://logo.clearbit.com/${item.domain}`
@@ -1419,6 +1421,9 @@ function App() {
           </Card>
         </div>
 
+        {/* Inspiration Section */}
+        <InspirationSection />
+
         {/* Features Section */}
         <div className="mt-24 mb-24">
           <div className="text-center mb-12">
@@ -1549,32 +1554,33 @@ function App() {
         </div>
 
         {/* SEO Section */}
-        <div className="mt-24 border-t pt-12">
-          <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Tout ce que vous pouvez faire</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-600 dark:text-slate-400">
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Pour les Restaurants</h3>
-              <p className="mb-4">
-                Créez un QR Code Menu pour permettre à vos clients d'accéder à votre carte sans contact. Mettez à jour votre menu PDF ou URL à tout moment sans changer le QR Code.
-              </p>
-              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Connexion WiFi Facile</h3>
-              <p>
-                Générez un QR Code WiFi pour que vos invités se connectent instantanément à votre réseau sans avoir à taper de mot de passe complexe.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Cartes de Visite (vCard)</h3>
-              <p className="mb-4">
-                Partagez vos coordonnées professionnelles en un scan. Le QR Code vCard permet d'ajouter directement votre contact dans le téléphone de votre interlocuteur.
-              </p>
-              <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Liens URL & Réseaux Sociaux</h3>
-              <p>
-                Redirigez vers votre site web, votre page Instagram, Facebook ou LinkedIn. Augmentez votre visibilité et votre trafic en ligne.
-              </p>
+        <div className="mt-32 border-t pt-20">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white text-center">Guide d'utilisation & FAQ</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 dark:text-slate-400 leading-relaxed">
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Pour les Restaurants</h3>
+                <p className="mb-6">
+                  Créez un QR Code Menu pour permettre à vos clients d'accéder à votre carte sans contact. Mettez à jour votre menu PDF ou URL à tout moment sans changer le QR Code.
+                </p>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Connexion WiFi Facile</h3>
+                <p>
+                  Générez un QR Code WiFi pour que vos invités se connectent instantanément à votre réseau sans avoir à taper de mot de passe complexe.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Cartes de Visite (vCard)</h3>
+                <p className="mb-6">
+                  Partagez vos coordonnées professionnelles en un scan. Le QR Code vCard permet d'ajouter directement votre contact dans le téléphone de votre interlocuteur.
+                </p>
+                <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Liens URL & Réseaux Sociaux</h3>
+                <p>
+                  Redirigez vers votre site web, votre page Instagram, Facebook ou LinkedIn. Augmentez votre visibilité et votre trafic en ligne.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
       </main>
 
       <Footer onNavigateToHelp={() => setShowHelpPage(true)} />
@@ -1586,7 +1592,7 @@ function App() {
         onSuccess={handleAuthSuccess}
         defaultView={authView}
       />
-    </div>
+    </div >
   )
 }
 
