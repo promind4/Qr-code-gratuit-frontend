@@ -138,6 +138,7 @@ function App() {
     setError(null)
 
     try {
+      console.log("Attempting to fetch from:", `${API_BASE_URL}/api/v1/qrcode/generate`)
       const response = await fetch(`${API_BASE_URL}/api/v1/qrcode/generate`, {
         method: "POST",
         headers: {
@@ -168,6 +169,7 @@ function App() {
       const url = URL.createObjectURL(blob)
       setQrCodeUrl(url)
     } catch (err) {
+      console.error("QR Code Generation Error:", err)
       setError(err instanceof Error ? err.message : "An error occurred")
       toast.error("Erreur de génération", { description: err instanceof Error ? err.message : "Une erreur est survenue" })
     } finally {
