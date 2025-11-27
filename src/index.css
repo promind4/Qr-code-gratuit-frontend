@@ -124,32 +124,7 @@ html {
     --chart-5: 27 87% 67%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+
 }
 
 @layer base {
@@ -162,36 +137,28 @@ html {
   }
 }
 
-/* ============================================
-   FORCE LIGHT THEME (OVERRIDE ABSOLU)
-   Ce bloc assure que le site est toujours blanc.
-   ============================================ */
-
-:root,
+/* =========================================
+   VERROUILLAGE FINAL DU MODE CLAIR
+   Ces règles forcent le fond blanc quoi qu'il arrive.
+   ========================================= */
 html,
 body,
-.dark {
-  /* On force les variables de couleur principales en mode clair */
-  --background: 0 0% 100% !important;
+#root {
+  background-color: #ffffff !important;
   /* Blanc pur */
-  --foreground: 222.2 84% 4.9% !important;
-  /* Slate-900 (foncé) */
-
-  /* On force les couleurs de fond et de texte */
-  background-color: hsl(var(--background)) !important;
-  color: hsl(var(--foreground)) !important;
-
-  /* On dit au navigateur que le schéma est clair */
+  color: #0f172a !important;
+  /* Texte foncé */
   color-scheme: light !important;
+  /* Force le navigateur en mode clair */
 }
 
-/* Sécurité supplémentaire pour les médias queries */
-@media (prefers-color-scheme: dark) {
-
-  :root,
-  html,
-  body {
-    background-color: #ffffff !important;
-    color: #0f172a !important;
-  }
+/* Filet de sécurité : si la classe .dark apparaît quand même */
+html.dark,
+body.dark,
+.dark {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  /* On réinitialise les variables vitales en blanc */
+  --background: 0 0% 100% !important;
+  --foreground: 222.2 84% 4.9% !important;
 }
