@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import { Helmet } from "react-helmet-async"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -392,6 +393,40 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50/50 dark:bg-slate-950 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Comment utiliser un QR Code pour mon restaurant ou bar ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Créez un QR Code Menu pour permettre à vos clients d'accéder à votre carte sans contact. Mettez à jour votre menu (PDF ou URL) à tout moment sans changer le QR Code imprimé."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment créer un QR Code pour la connexion WiFi ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Simplifiez la connexion pour vos clients ou invités. Ils scannent le code et se connectent automatiquement à votre réseau, sans avoir à taper de mot de passe complexe."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je utiliser un QR Code pour ma carte de visite (vCard) ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui, générez une vCard numérique. Partagez instantanément toutes vos coordonnées (téléphone, email, site web, adresse) directement dans le carnet d'adresses du téléphone qui scanne."
+                }
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       <Toaster />
       {/* Header */}
       <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b sticky top-0 z-50 transition-all duration-200">
