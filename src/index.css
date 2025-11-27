@@ -161,3 +161,40 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* =========================================
+   FORCE LIGHT THEME - NUCLEAR OPTION
+   Ces règles écrasent tout pour imposer le thème clair.
+   ========================================= */
+
+/* Force le fond blanc et le texte foncé sur la racine et le corps */
+html, body, #root {
+    background-color: #ffffff !important; /* Blanc pur */
+    color: #0f172a !important;           /* Slate-900 (texte foncé) */
+    color-scheme: light !important;      /* Dit au navigateur que c'est un site clair */
+}
+
+/* Si le système tente d'appliquer le mode sombre, on l'annule */
+@media (prefers-color-scheme: dark) {
+    html, body, #root {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+    }
+}
+
+/* Neutralise la classe .dark si elle est ajoutée par erreur */
+html.dark, body.dark, .dark {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    /* On réinitialise les variables CSS de shadcn/ui pour le mode clair */
+    --background: 0 0% 100% !important;
+    --foreground: 222.2 84% 4.9% !important;
+}
+
+/* Force les textes qui seraient restés blancs à devenir foncés */
+.dark .text-white,
+.dark .text-slate-50,
+.dark .text-slate-100,
+.dark .text-slate-200 {
+    color: #0f172a !important;
+}
