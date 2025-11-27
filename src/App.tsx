@@ -30,14 +30,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+
 import {
   HoverCard,
   HoverCardContent,
@@ -65,7 +58,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { toast } from "sonner"
 import {
   Download, Link, Type, Mail, Palette, Settings, QrCode, Sparkles,
-  FileText, Star, Phone, Upload, Image as ImageIcon, Shapes, Menu, Share2,
+  FileText, Star, Phone, Upload, Image as ImageIcon, Shapes, Share2,
   Check, Copy, X, Info, LogOut, User as UserIcon, Infinity as InfinityIcon,
   Utensils, Wifi, Contact, Globe
 } from "lucide-react"
