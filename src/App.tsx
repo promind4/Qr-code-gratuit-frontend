@@ -413,7 +413,7 @@ function App() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-6">
             <NavigationMenu>
               <NavigationMenuList>
                 {/* <NavigationMenuItem>
@@ -516,46 +516,7 @@ function App() {
             )}
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="md:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>
-                    Naviguez dans l'application
-                  </SheetDescription>
-                </SheetHeader>
-                <div className="flex flex-col gap-4 mt-8">
-                  <Button variant="ghost" className="justify-start">Fonctionnalités</Button>
-                  <Button variant="ghost" className="justify-start" onClick={() => setShowHelpPage(true)}>Aide</Button>
-                  <Separator />
-                  {user ? (
-                    <>
-                      <div className="px-2 py-2 text-sm">
-                        <p className="font-medium">{user.first_name} {user.last_name}</p>
-                        <p className="text-xs text-slate-500">{user.email}</p>
-                      </div>
-                      <Button variant="outline" className="justify-start text-red-600" onClick={handleLogout}>
-                        <LogOut className="mr-2 h-4 w-4" />
-                        Se déconnecter
-                      </Button>
-                    </>
-                  ) : (
-                    <div className="hidden">
-                      <Button variant="outline" className="justify-start" onClick={() => { setAuthView("login"); setAuthModalOpen(true); }}>Connexion</Button>
-                      <Button className="justify-start" onClick={() => { setAuthView("register"); setAuthModalOpen(true); }}>S'inscrire</Button>
-                    </div>
-                  )}
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+
         </div>
       </header>
 
@@ -853,7 +814,7 @@ function App() {
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="px-4 pt-4 pb-2">
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="flex flex-col sm:flex-row gap-4">
                           <div className="space-y-3">
                             <Label htmlFor="color" className="text-xs font-medium text-slate-500 uppercase tracking-wider">Couleur principale</Label>
                             <Popover>
