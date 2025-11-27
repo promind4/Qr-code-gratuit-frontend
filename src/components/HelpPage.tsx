@@ -483,7 +483,10 @@ export function HelpPage({ onClose }: HelpPageProps) {
                                         <strong className="text-slate-900 dark:text-white">Fichiers uploadés :</strong> Les fichiers PDF ou images que vous uploadez sont stockés temporairement pour générer le QR Code, puis automatiquement supprimés après 24 heures.
                                     </div>
                                     <div>
-                                        <strong className="text-slate-900 dark:text-white">Cookies :</strong> Nous utilisons uniquement des cookies techniques nécessaires au bon fonctionnement du site. Aucun cookie de tracking ou publicitaire n'est installé.
+                                        <strong className="text-slate-900 dark:text-white">Cookies et Publicité :</strong> Nous utilisons des cookies techniques nécessaires au bon fonctionnement du site. En outre, nous faisons appel à des régies publicitaires tierces, notamment Google AdSense, pour diffuser des annonces lorsque vous visitez notre site Web. Ces entreprises peuvent utiliser des données relatives à votre navigation sur notre site Web ou d'autres sites (à l'exception de votre nom, adresse postale, adresse e-mail ou numéro de téléphone) afin de vous proposer des annonces de produits ou services adaptées à vos centres d'intérêt (Cookies publicitaires et de tracking).
+                                    </div>
+                                    <div>
+                                        <strong className="text-slate-900 dark:text-white">Vos droits (RGPD) :</strong> Conformément à la réglementation européenne, vous avez la possibilité d'accepter ou de refuser ces cookies publicitaires lors de votre première visite via notre bannière de consentement, et de modifier ce choix à tout moment.
                                     </div>
                                 </AccordionContent>
                             </AccordionItem>

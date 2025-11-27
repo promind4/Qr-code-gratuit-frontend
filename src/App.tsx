@@ -1422,10 +1422,12 @@ function App() {
         </div>
 
         {/* Inspiration Section */}
-        <InspirationSection />
+        <div className="my-24">
+          <InspirationSection />
+        </div>
 
         {/* Features Section */}
-        <div className="mt-24 mb-24">
+        <div className="my-24 py-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Pourquoi nous choisir ?</h2>
             <p className="text-slate-600 mt-4">Des fonctionnalités professionnelles, totalement gratuites.</p>
@@ -1490,10 +1492,10 @@ function App() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-24 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="my-24 py-12 grid grid-cols-1 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-4">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Sommaire</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Guide d'utilisation & FAQ</h3>
               <nav className="space-y-2">
                 <a href="#faq-definition" className="block text-slate-600 hover:text-blue-600 transition-colors text-sm">Qu'est-ce qu'un QR Code ?</a>
                 <a href="#faq-security" className="block text-slate-600 hover:text-blue-600 transition-colors text-sm">Les QR Codes sont-ils sûrs ?</a>
@@ -1510,9 +1512,11 @@ function App() {
 
               <div id="faq-definition" className="scroll-mt-28">
                 <h3 className="text-xl font-semibold mb-3 text-slate-800">Qu'est-ce qu'un QR Code ?</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Un QR Code (“Quick Response Code”) est un code-barres bidimensionnel que vous pouvez scanner avec votre smartphone. Il peut contenir des informations comme une URL, un texte, un email, un numéro de téléphone ou un lien direct vers vos pages d’avis. Par exemple, un restaurant peut créer un QR Code qui mène directement à son formulaire d’avis Google. Une fois scanné, l’utilisateur est redirigé automatiquement, simplifiant l’expérience et augmentant la probabilité qu’il laisse un retour.
-                </p>
+                <div className="max-w-4xl mx-auto">
+                  <p className="text-slate-600 leading-relaxed text-lg">
+                    Un QR Code (“Quick Response Code”) est un code-barres bidimensionnel que vous pouvez scanner avec votre smartphone. Il peut contenir des informations comme une URL, un texte, un email, un numéro de téléphone ou un lien direct vers vos pages d’avis. Par exemple, un restaurant peut créer un QR Code qui mène directement à son formulaire d’avis Google. Une fois scanné, l’utilisateur est redirigé automatiquement, simplifiant l’expérience et augmentant la probabilité qu’il laisse un retour.
+                  </p>
+                </div>
               </div>
 
               <div id="faq-security" className="scroll-mt-28">
