@@ -1492,9 +1492,9 @@ function App() {
         </div>
 
         {/* FAQ Section */}
-        <div className="my-24 py-12 grid grid-cols-1 lg:grid-cols-4 gap-12">
-          <div className="lg:col-span-1">
-            <div className="sticky top-24 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4 my-24">
+          <div className="md:col-span-1 md:sticky md:top-24 h-fit">
+            <div className="space-y-4">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Guide d'utilisation & FAQ</h3>
               <nav className="space-y-2">
                 <a href="#faq-definition" className="block text-slate-600 hover:text-blue-600 transition-colors text-sm">Qu'est-ce qu'un QR Code ?</a>
@@ -1506,7 +1506,7 @@ function App() {
             </div>
           </div>
 
-          <div className="lg:col-span-3 space-y-12">
+          <div className="md:col-span-3 space-y-12">
             <div className="prose prose-slate dark:prose-invert max-w-none">
               <h2 className="text-3xl font-bold mb-8 text-slate-900">Questions Fréquentes</h2>
 
