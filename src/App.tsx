@@ -1527,7 +1527,7 @@ function App() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Pour les Restaurants</h3>
+                    <h3 id="restaurants" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Pour les Restaurants</h3>
                     <p>
                       Créez un QR Code Menu pour permettre à vos clients d'accéder à votre carte sans contact. Mettez à jour votre menu PDF ou URL à tout moment sans changer le QR Code.
                     </p>
@@ -1541,7 +1541,7 @@ function App() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Connexion WiFi Facile</h3>
+                    <h3 id="wifi" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Connexion WiFi Facile</h3>
                     <p>
                       Générez un QR Code WiFi pour que vos invités se connectent instantanément à votre réseau sans avoir à taper de mot de passe complexe.
                     </p>
@@ -1557,7 +1557,7 @@ function App() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Cartes de Visite (vCard)</h3>
+                    <h3 id="vcard" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Cartes de Visite (vCard)</h3>
                     <p>
                       Partagez vos coordonnées professionnelles en un scan. Le QR Code vCard permet d'ajouter directement votre contact dans le téléphone de votre interlocuteur.
                     </p>
@@ -1571,7 +1571,7 @@ function App() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Liens URL & Réseaux Sociaux</h3>
+                    <h3 id="reseaux" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Liens URL & Réseaux Sociaux</h3>
                     <p>
                       Redirigez vers votre site web, votre page Instagram, Facebook ou LinkedIn. Augmentez votre visibilité et votre trafic en ligne.
                     </p>
