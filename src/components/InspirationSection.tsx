@@ -38,13 +38,13 @@ export function InspirationSection() {
     return (
         <div className="mt-24 mb-24">
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Exemples de réalisations</h2>
+                <h2 className="text-3xl font-bold text-slate-900">Exemples de réalisations</h2>
                 <p className="text-slate-600 mt-4">Inspirez-vous de ces designs pour créer le vôtre.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {EXAMPLES.map((example) => (
-                    <Card key={example.id} className="border-none shadow-md hover:shadow-xl transition-all duration-300 group bg-white dark:bg-slate-900 overflow-hidden">
+                    <Card key={example.id} className="border-none shadow-md hover:shadow-xl transition-all duration-300 group bg-white overflow-hidden">
                         <CardHeader className="pb-2 p-4">
                             <CardTitle className="text-base flex items-center gap-2 justify-center" style={{ color: example.color }}>
                                 {example.title}

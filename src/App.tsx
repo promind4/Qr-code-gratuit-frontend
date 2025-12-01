@@ -1421,11 +1421,11 @@ function App() {
         {/* Features Section */}
         <div className="my-24 py-12">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Pourquoi nous choisir ?</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Pourquoi nous choisir ?</h2>
             <p className="text-slate-600 mt-4">Des fonctionnalités professionnelles, totalement gratuites.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+            <Card className="border-none shadow-lg bg-slate-50">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
                   <InfinityIcon className="h-6 w-6" />
@@ -1433,13 +1433,13 @@ function App() {
                 <CardTitle className="text-xl">Durée de vie illimitée</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-slate-600">
                   Vos QR Codes fonctionnent indéfiniment. Pas de limite de scan, pas d'expiration. Utilisez-les pour vos projets commerciaux en toute sérénité.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+            <Card className="border-none shadow-lg bg-slate-50">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 text-purple-600">
                   <Download className="h-6 w-6" />
@@ -1447,13 +1447,13 @@ function App() {
                 <CardTitle className="text-xl">Haute Définition & Vectoriel</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-slate-600">
                   Idéal pour l'impression. Téléchargez vos codes en format PNG haute qualité ou SVG vectoriel pour une netteté parfaite sur vos affiches et flyers.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+            <Card className="border-none shadow-lg bg-slate-50">
               <CardHeader>
                 <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 text-emerald-600">
                   <ImageIcon className="h-6 w-6" />
@@ -1461,13 +1461,13 @@ function App() {
                 <CardTitle className="text-xl">Personnalisation avec Logo</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-slate-600">
                   Rendez votre QR Code unique. Ajoutez votre propre logo ou choisissez parmi les icônes de réseaux sociaux (Instagram, Facebook, WiFi...).
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg bg-slate-50 dark:bg-slate-900">
+            <Card className="border-none shadow-lg bg-slate-50">
               <CardHeader>
                 <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4 text-amber-600">
                   <Palette className="h-6 w-6" />
@@ -1475,7 +1475,7 @@ function App() {
                 <CardTitle className="text-xl">Design sur mesure</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-slate-600">
                   Ne vous contentez pas du noir et blanc. Changez les couleurs, les formes des points et les cadres pour correspondre à votre identité visuelle.
                 </p>
               </CardContent>
@@ -1487,7 +1487,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4 my-24">
           <div className="md:col-span-1 md:sticky md:top-24 h-fit">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Guide d'utilisation & FAQ</h3>
+              <h3 className="text-xl font-bold text-slate-900">Guide d'utilisation & FAQ</h3>
               <nav className="space-y-2">
                 <a href="#faq-definition" className="block text-slate-600 hover:text-blue-600 transition-colors text-sm">Qu'est-ce qu'un QR Code ?</a>
                 <a href="#faq-security" className="block text-slate-600 hover:text-blue-600 transition-colors text-sm">Les QR Codes sont-ils sûrs ?</a>
@@ -1499,7 +1499,7 @@ function App() {
           </div>
 
           <div className="md:col-span-3 space-y-12">
-            <div className="prose prose-slate dark:prose-invert max-w-none">
+            <div className="prose prose-slate max-w-none">
               <h2 className="text-3xl font-bold mb-8 text-slate-900">Questions Fréquentes</h2>
 
               <div id="faq-definition" className="scroll-mt-28">
@@ -1552,17 +1552,17 @@ function App() {
         {/* SEO Section */}
         <div className="mt-32 border-t pt-20">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white text-center">Guide d'utilisation & FAQ</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 dark:text-slate-400 leading-relaxed">
+            <h2 className="text-3xl font-bold mb-8 text-slate-900 text-center">Guide d'utilisation & FAQ</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 leading-relaxed">
               <div className="space-y-12">
                 <div className="flex gap-4">
                   <div className="shrink-0">
-                    <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center text-orange-600 dark:text-orange-400">
+                    <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600">
                       <Utensils className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <h3 id="restaurants" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Pour les Restaurants</h3>
+                    <h3 id="restaurants" className="text-xl font-semibold mb-2 text-slate-800">Pour les Restaurants</h3>
                     <p>
                       Créez un QR Code Menu pour permettre à vos clients d'accéder à votre carte sans contact. Mettez à jour votre menu PDF ou URL à tout moment sans changer le QR Code.
                     </p>
@@ -1571,12 +1571,12 @@ function App() {
 
                 <div className="flex gap-4">
                   <div className="shrink-0">
-                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                       <Wifi className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <h3 id="wifi" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Connexion WiFi Facile</h3>
+                    <h3 id="wifi" className="text-xl font-semibold mb-2 text-slate-800">Connexion WiFi Facile</h3>
                     <p>
                       Générez un QR Code WiFi pour que vos invités se connectent instantanément à votre réseau sans avoir à taper de mot de passe complexe.
                     </p>
@@ -1587,12 +1587,12 @@ function App() {
               <div className="space-y-12">
                 <div className="flex gap-4">
                   <div className="shrink-0">
-                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 dark:text-purple-400">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
                       <Contact className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <h3 id="vcard" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Cartes de Visite (vCard)</h3>
+                    <h3 id="vcard" className="text-xl font-semibold mb-2 text-slate-800">Cartes de Visite (vCard)</h3>
                     <p>
                       Partagez vos coordonnées professionnelles en un scan. Le QR Code vCard permet d'ajouter directement votre contact dans le téléphone de votre interlocuteur.
                     </p>
@@ -1601,12 +1601,12 @@ function App() {
 
                 <div className="flex gap-4">
                   <div className="shrink-0">
-                    <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
                       <Globe className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <h3 id="reseaux" className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200">Liens URL & Réseaux Sociaux</h3>
+                    <h3 id="reseaux" className="text-xl font-semibold mb-2 text-slate-800">Liens URL & Réseaux Sociaux</h3>
                     <p>
                       Redirigez vers votre site web, votre page Instagram, Facebook ou LinkedIn. Augmentez votre visibilité et votre trafic en ligne.
                     </p>
