@@ -52,7 +52,7 @@ import {
 } from "@/components/ui/dialog"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { Skeleton } from "@/components/ui/skeleton"
+
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Separator } from "@/components/ui/separator"
 import { Toaster } from "@/components/ui/sonner"
@@ -61,7 +61,7 @@ import {
   Download, Link, Type, Mail, Palette, Settings, QrCode, Sparkles,
   FileText, Star, Phone, Upload, Image as ImageIcon, Shapes, Share2,
   Check, Copy, X, Info, LogOut, User as UserIcon, Infinity as InfinityIcon,
-  Utensils, Wifi, Contact, Globe
+  Utensils, Wifi, Contact, Globe, LoaderCircle
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { HelpPage } from "@/components/HelpPage"
