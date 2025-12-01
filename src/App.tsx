@@ -103,6 +103,7 @@ function App() {
   const [authModalOpen, setAuthModalOpen] = useState(false)
   const [showHelpPage, setShowHelpPage] = useState(false)
   const [authView, setAuthView] = useState<"login" | "register">("login")
+  const [isSlowLoading, setIsSlowLoading] = useState(false)
 
   // Load user from localStorage on mount
   useEffect(() => {
@@ -110,6 +111,20 @@ function App() {
     if (savedUser) {
       setUser(savedUser)
     }
+  }, [])
+
+  // Wake up Render backend on initial load (silent health check)
+  useEffect(() => {
+    const wakeUpBackend = async () => {
+      try {
+        await fetch(`${API_BASE_URL}/health`, { method: 'GET' })
+        console.log('Backend wake-up call sent')
+      } catch (err) {
+        // Silent fail - this is just a wake-up call
+        console.log('Backend wake-up call failed (expected if backend is sleeping)')
+      }
+    }
+    wakeUpBackend()
   }, [])
 
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -131,6 +146,12 @@ function App() {
 
     setLoading(true)
     setError(null)
+    setIsSlowLoading(false)
+
+    // Timer pour afficher le message de patience après 3 secondes
+    const slowLoadingTimer = setTimeout(() => {
+      setIsSlowLoading(true)
+    }, 3000)
 
     try {
       console.log("Attempting to fetch from:", `${API_BASE_URL}/api/v1/qrcode/generate`)
@@ -168,6 +189,8 @@ function App() {
       setError(err instanceof Error ? err.message : "An error occurred")
       toast.error("Erreur de génération", { description: err instanceof Error ? err.message : "Une erreur est survenue" })
     } finally {
+      clearTimeout(slowLoadingTimer)
+      setIsSlowLoading(false)
       setLoading(false)
     }
   }
@@ -1180,10 +1203,16 @@ function App() {
                 <div className="relative bg-white p-4 rounded-2xl shadow-2xl shadow-slate-200/50 transition-transform duration-300 group-hover:scale-[1.02]">
                   {loading ? (
                     <div className="w-[250px] h-[250px] flex flex-col items-center justify-center gap-4">
-                      <Skeleton className="h-[200px] w-[200px] rounded-xl" />
-                      <div className="space-y-2 w-full px-4">
-                        <Skeleton className="h-4 w-full" />
-                        <Skeleton className="h-4 w-2/3" />
+                      <div className="relative flex flex-col items-center gap-3">
+                        <LoaderCircle className="h-12 w-12 text-blue-600 animate-spin" />
+                        <p className="text-sm font-medium text-slate-700">Génération en cours...</p>
+                        {isSlowLoading && (
+                          <div className="mt-4 p-3 bg-orange-50 border border-orange-200 rounded-lg max-w-[220px] animate-in fade-in slide-in-from-top-2 duration-500">
+                            <p className="text-xs text-orange-700 text-center leading-relaxed">
+                              ⏳ Le serveur gratuit démarre, cela peut prendre jusqu'à 1 minute. Merci de patienter...
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   ) : qrCodeUrl ? (
