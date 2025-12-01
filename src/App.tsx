@@ -392,7 +392,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50/50 dark:bg-slate-950 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col">
+    <div className="min-h-screen bg-slate-50/50 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify({
@@ -429,13 +429,13 @@ function App() {
       </Helmet>
       <Toaster />
       {/* Header */}
-      <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b sticky top-0 z-50 transition-all duration-200">
+      <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50 transition-all duration-200">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white p-2.5 rounded-xl shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 transition-all duration-300 group-hover:scale-105">
               <QrCode className="h-6 w-6" />
             </div>
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
               QR Code Gratuit
             </span>
           </div>
@@ -550,10 +550,10 @@ function App() {
 
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 space-y-4">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl text-slate-900 dark:text-white">
+          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl text-slate-900">
             Générateur de QR Code Gratuit et Haute Qualité
           </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Créez des QR codes personnalisés avec Logo, Couleurs et Designs uniques. Format vectoriel (SVG, PDF) disponible. 100% Gratuit et sans inscription.
           </p>
         </div>
@@ -561,13 +561,13 @@ function App() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 
           {/* Step 1: Content */}
-          <Card className="h-full border-none shadow-xl shadow-slate-200/40 dark:shadow-none overflow-hidden transition-all hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col ring-1 ring-slate-200 dark:ring-slate-800">
-            <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50/50 dark:from-slate-800 dark:to-slate-800/50 border-b border-blue-100/50 p-6">
+          <Card className="h-full border-none shadow-xl shadow-slate-200/40 overflow-hidden transition-all hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col ring-1 ring-slate-200">
+            <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50/50 border-b border-blue-100/50 p-6">
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-600 text-white font-bold shadow-lg shadow-blue-500/20 text-lg">1</div>
                 <div>
-                  <CardTitle className="text-blue-950 dark:text-blue-100 text-xl">Type de contenu</CardTitle>
-                  <CardDescription className="text-blue-600/80 dark:text-blue-300/80 mt-1">
+                  <CardTitle className="text-blue-950 text-xl">Type de contenu</CardTitle>
+                  <CardDescription className="text-blue-600/80 mt-1">
                     Choisissez ce que votre QR Code doit ouvrir
                   </CardDescription>
                 </div>
@@ -582,7 +582,7 @@ function App() {
                 else if (v === 'rating') setContent("")
                 else setContent("Mon texte ici")
               }} className="w-full">
-                <TabsList className="grid w-full grid-cols-3 gap-2 mb-8 p-1.5 bg-slate-100/80 dark:bg-slate-800 rounded-xl h-auto">
+                <TabsList className="grid w-full grid-cols-3 gap-2 mb-8 p-1.5 bg-slate-100/80 rounded-xl h-auto">
                   <HoverCard openDelay={200}>
                     <HoverCardTrigger asChild>
                       <TabsTrigger value="url" className="rounded-lg py-3 text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm transition-all duration-200 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
@@ -812,13 +812,13 @@ function App() {
           </Card>
 
           {/* Step 2: Customization */}
-          <Card className="h-full border-none shadow-xl shadow-slate-200/40 dark:shadow-none overflow-hidden transition-all hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col ring-1 ring-slate-200 dark:ring-slate-800">
-            <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50/50 dark:from-slate-800 dark:to-slate-800/50 border-b border-purple-100/50 p-6">
+          <Card className="h-full border-none shadow-xl shadow-slate-200/40 overflow-hidden transition-all hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col ring-1 ring-slate-200">
+            <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50/50 border-b border-purple-100/50 p-6">
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-purple-600 text-white font-bold shadow-lg shadow-purple-500/20 text-lg">2</div>
                 <div>
-                  <CardTitle className="text-purple-950 dark:text-purple-100 text-xl">Personnalisation</CardTitle>
-                  <CardDescription className="text-purple-600/80 dark:text-purple-300/80 mt-1">
+                  <CardTitle className="text-purple-950 text-xl">Personnalisation</CardTitle>
+                  <CardDescription className="text-purple-600/80 mt-1">
                     Rendez votre QR Code unique
                   </CardDescription>
                 </div>
@@ -826,7 +826,7 @@ function App() {
             </CardHeader>
             <CardContent className="p-6 flex-1">
               <Tabs defaultValue="style" className="w-full">
-                <TabsList className="grid w-full grid-cols-3 gap-2 mb-8 p-1.5 bg-slate-100/80 dark:bg-slate-800 rounded-xl h-auto">
+                <TabsList className="grid w-full grid-cols-3 gap-2 mb-8 p-1.5 bg-slate-100/80 rounded-xl h-auto">
                   <TabsTrigger value="style" className="rounded-lg py-2.5 text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-sm transition-all"><Palette className="h-4 w-4 mr-2" /> Style</TabsTrigger>
                   <TabsTrigger value="logo" className="rounded-lg py-2.5 text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-sm transition-all"><ImageIcon className="h-4 w-4 mr-2" /> Logo</TabsTrigger>
                   <TabsTrigger value="settings" className="rounded-lg py-2.5 text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-sm transition-all"><Settings className="h-4 w-4 mr-2" /> Options</TabsTrigger>
@@ -834,9 +834,9 @@ function App() {
 
                 <TabsContent value="style" className="space-y-6 mt-0 animate-in fade-in slide-in-from-bottom-2 duration-500">
                   <Accordion type="single" collapsible defaultValue="colors" className="w-full">
-                    <AccordionItem value="colors" className="border-slate-200 dark:border-slate-800">
-                      <AccordionTrigger className="hover:no-underline hover:bg-slate-50 dark:hover:bg-slate-800/50 px-4 rounded-lg">
-                        <div className="flex items-center gap-2 text-slate-900 dark:text-slate-100">
+                    <AccordionItem value="colors" className="border-slate-200">
+                      <AccordionTrigger className="hover:no-underline hover:bg-slate-50 px-4 rounded-lg">
+                        <div className="flex items-center gap-2 text-slate-900">
                           <Palette className="h-4 w-4 text-purple-600" />
                           <span>Couleurs</span>
                         </div>
@@ -915,9 +915,9 @@ function App() {
                       </AccordionContent>
                     </AccordionItem>
 
-                    <AccordionItem value="shapes" className="border-slate-200 dark:border-slate-800 border-b-0">
-                      <AccordionTrigger className="hover:no-underline hover:bg-slate-50 dark:hover:bg-slate-800/50 px-4 rounded-lg">
-                        <div className="flex items-center gap-2 text-slate-900 dark:text-slate-100">
+                    <AccordionItem value="shapes" className="border-slate-200 border-b-0">
+                      <AccordionTrigger className="hover:no-underline hover:bg-slate-50 px-4 rounded-lg">
+                        <div className="flex items-center gap-2 text-slate-900">
                           <Shapes className="h-4 w-4 text-purple-600" />
                           <span>Formes</span>
                         </div>
@@ -957,9 +957,9 @@ function App() {
                       </AccordionContent>
                     </AccordionItem>
 
-                    <AccordionItem value="stickers" className="hidden border-slate-200 dark:border-slate-800 border-b-0">
-                      <AccordionTrigger className="hover:no-underline hover:bg-slate-50 dark:hover:bg-slate-800/50 px-4 rounded-lg">
-                        <div className="flex items-center gap-2 text-slate-900 dark:text-slate-100">
+                    <AccordionItem value="stickers" className="hidden border-slate-200 border-b-0">
+                      <AccordionTrigger className="hover:no-underline hover:bg-slate-50 px-4 rounded-lg">
+                        <div className="flex items-center gap-2 text-slate-900">
                           <Sparkles className="h-4 w-4 text-purple-600" />
                           <span>Autocollants</span>
                           {selectedSticker && (
@@ -1161,23 +1161,23 @@ function App() {
           </Card>
 
           {/* Step 3: Preview */}
-          <Card className="h-full border-none shadow-xl shadow-slate-200/40 dark:shadow-none overflow-hidden transition-all hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col sticky top-24 ring-1 ring-slate-200 dark:ring-slate-800">
-            <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50/50 dark:from-slate-800 dark:to-slate-800/50 border-b border-emerald-100/50 p-6">
+          <Card className="h-full border-none shadow-xl shadow-slate-200/40 overflow-hidden transition-all hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col sticky top-24 ring-1 ring-slate-200">
+            <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50/50 border-b border-emerald-100/50 p-6">
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/20 text-lg">3</div>
                 <div>
-                  <CardTitle className="text-emerald-950 dark:text-emerald-100 text-xl">Aperçu</CardTitle>
-                  <CardDescription className="text-emerald-600/80 dark:text-emerald-300/80 mt-1">
+                  <CardTitle className="text-emerald-950 text-xl">Aperçu</CardTitle>
+                  <CardDescription className="text-emerald-600/80 mt-1">
                     Visualisez et téléchargez
                   </CardDescription>
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="p-6 flex-1 flex flex-col items-center justify-center gap-8 min-h-[400px] bg-slate-50/50 dark:bg-slate-900/50">
+            <CardContent className="p-6 flex-1 flex flex-col items-center justify-center gap-8 min-h-[400px] bg-slate-50/50">
 
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
-                <div className="relative bg-white p-4 rounded-2xl shadow-2xl shadow-slate-200/50 dark:shadow-black/50 transition-transform duration-300 group-hover:scale-[1.02]">
+                <div className="relative bg-white p-4 rounded-2xl shadow-2xl shadow-slate-200/50 transition-transform duration-300 group-hover:scale-[1.02]">
                   {loading ? (
                     <div className="w-[250px] h-[250px] flex flex-col items-center justify-center gap-4">
                       <Skeleton className="h-[200px] w-[200px] rounded-xl" />

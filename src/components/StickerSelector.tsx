@@ -97,8 +97,8 @@ export function StickerSelector({ selectedSticker, onSelect }: StickerSelectorPr
             </div>
 
             {selectedSticker && (
-                <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
-                    <p className="text-xs text-purple-700 dark:text-purple-300">
+                <div className="bg-purple-50 p-3 rounded-lg">
+                    <p className="text-xs text-purple-700">
                         <strong>Info:</strong> L'autocollant sera appliqué sous votre QR Code lors du téléchargement.
                     </p>
                 </div>
